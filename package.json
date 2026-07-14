@@ -1,0 +1,17 @@
+diff --git a/package.json b/package.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..bf274aa65ba4d06a681e81a1ccc57db231633e67
+--- /dev/null
++++ b/package.json
+@@ -0,0 +1,11 @@
++{
++  "name": "bfs-punch-list",
++  "version": "1.0.0",
++  "description": "Field-friendly Builders FirstSource punch list app",
++  "private": true,
++  "scripts": {
++    "start": "python3 -m http.server 4173",
++    "build": "node scripts/validate-app.mjs"
++  },
++  "devDependencies": {}
++}
