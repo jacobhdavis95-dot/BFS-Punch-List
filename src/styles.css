@@ -1,0 +1,70 @@
+diff --git a/src/styles.css b/src/styles.css
+new file mode 100644
+index 0000000000000000000000000000000000000000..82661fc5aa2536e102747ac30950b275fbf82fb7
+--- /dev/null
++++ b/src/styles.css
+@@ -0,0 +1,64 @@
++:root {
++  color: #13202b;
++  background: #eef3f7;
++  font-family: Arial, Helvetica, sans-serif;
++  font-size: 20px;
++}
++
++* { box-sizing: border-box; }
++body { margin: 0; min-width: 320px; }
++button, input, select, textarea { font: inherit; }
++
++.app-shell { width: min(1180px, 100%); margin: 0 auto; padding: 20px; }
++.hero {
++  display: flex;
++  justify-content: space-between;
++  gap: 20px;
++  align-items: stretch;
++  color: white;
++  background: linear-gradient(135deg, #003b71, #0067a8);
++  border-radius: 28px;
++  padding: 28px;
++  box-shadow: 0 14px 34px rgba(0, 59, 113, .22);
++}
++.eyebrow { margin: 0 0 8px; color: #ffd24a; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
++h1 { margin: 0; font-size: clamp(2.2rem, 8vw, 4.4rem); line-height: .95; }
++h2 { margin: 0 0 18px; font-size: 1.55rem; }
++.subtitle { max-width: 680px; font-size: 1.2rem; line-height: 1.35; }
++.progress-card { min-width: 190px; display: grid; place-items: center; text-align: center; background: rgba(255,255,255,.16); border: 2px solid rgba(255,255,255,.3); border-radius: 24px; padding: 18px; }
++.progress-card strong { font-size: 2.5rem; }
++.progress-card span { font-weight: 700; }
++.panel, .punch-card { background: white; border: 1px solid #d5e1ea; border-radius: 24px; padding: 22px; margin-top: 20px; box-shadow: 0 8px 22px rgba(19,32,43,.08); }
++.grid { display: grid; gap: 16px; }
++.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
++.add-grid { grid-template-columns: 1fr 2fr 180px; align-items: end; }
++label { display: grid; gap: 8px; font-weight: 800; }
++label span { color: #34495a; }
++input, select, textarea { width: 100%; border: 2px solid #b7c7d4; border-radius: 16px; padding: 16px; min-height: 58px; background: #fbfdff; color: #13202b; }
++textarea { min-height: 115px; resize: vertical; line-height: 1.35; }
++button { min-height: 58px; border: 0; border-radius: 16px; padding: 14px 20px; font-weight: 900; display: inline-flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer; }
++.primary { margin-top: 18px; width: 100%; background: #f6c445; color: #14212b; }
++.secondary { background: #003b71; color: white; }
++.danger { width: 100%; background: #fff0f0; color: #9f1d20; border: 2px solid #ffc9c9; }
++.toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 28px 0 12px; }
++.toolbar h2 { margin: 0; }
++.list { display: grid; gap: 18px; }
++.punch-card { margin: 0; display: grid; gap: 16px; }
++.punch-card.complete { border-color: #8ed19f; background: #f4fff6; }
++.card-top { display: flex; gap: 12px; align-items: center; }
++.area { font-weight: 900; font-size: 1.25rem; }
++.badge { border-radius: 999px; padding: 10px 14px; font-weight: 900; color: white; }
++.high { background: #d0202a; }
++.medium { background: #b77700; }
++.low { background: #2d7f46; }
++.status-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
++.status-row button { background: #e7eef4; color: #1a3348; }
++.status-row button.selected { background: #003b71; color: white; outline: 4px solid #f6c445; }
++
++@media (max-width: 760px) {
++  :root { font-size: 18px; }
++  .app-shell { padding: 12px; }
++  .hero, .toolbar, .card-top { flex-direction: column; align-items: stretch; }
++  .two, .add-grid, .status-row { grid-template-columns: 1fr; }
++  .hero { padding: 22px; border-radius: 20px; }
++}
